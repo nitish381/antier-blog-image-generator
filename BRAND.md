@@ -1,0 +1,221 @@
+# Antier Blog Image — Brand & Style Guide
+
+The single source of truth for every Antier blog banner made in this repo.
+It is based on the live blog images at https://www.antier.com/blogs/ and the official logo file.
+Follow it exactly. When it conflicts with any other file (including older Figma banners), **this guide wins**.
+
+Reference files:
+- `references/blog-banner-choosing-a-blockchain-partner.jpg`: the main style reference (931×551)
+- `references/blog-listing-page-full.webp`: the full blog listing page (16 cards + spotlight)
+- `brand/logo/antier-mark-original.pdf`: the official mark (Adobe Illustrator export)
+
+---
+
+## 1. Logo: the Antier mark
+
+### Construction (from the official PDF)
+Two equal squares touching corner to corner on a diagonal, plus two cyan **quarter circles** that sit
+*inside* the squares at the corner where they touch.
+
+```
+┌───────┐
+│   ◜██ │        ◜ = cyan quarter circle in the bottom-right corner of the top-left square
+│  ◜███ │
+└───────┼───────┐
+        │ ██◞   │ ◞ = cyan quarter circle in the top-left corner of the bottom-right square
+        │ ██◞   │
+        └───────┘
+```
+
+On a 100×100 grid:
+- Square A: `x 0–50, y 0–50`
+- Square B: `x 50–100, y 50–100`
+- Quarter circle 1: centre `(50,50)`, radius `25`, top-left quadrant (inside square A)
+- Quarter circle 2: centre `(50,50)`, radius `25`, bottom-right quadrant (inside square B)
+- Radius = ½ of the square side. The other two quadrants (top-right and bottom-left) stay **empty**.
+
+> ⚠️ It is **not** a full circle over two squares. The first ERC-3643 Figma banner drew a full circle; that is wrong.
+
+### Files
+| File | Use |
+|---|---|
+| `brand/logo/antier-mark-on-dark.svg` | **Blog banners** (white squares, cyan quarters) |
+| `brand/logo/antier-mark.svg` | Light backgrounds (navy squares, cyan quarters) |
+| `brand/logo/antier-mark-original.pdf` | Master from Illustrator |
+
+### Logo colours
+| Part | On dark (banners) | On light |
+|---|---|---|
+| Squares | `#FFFFFF` | `#002245` (Antier navy) |
+| Quarter circles | `#0C9EDA` (Antier cyan) | `#0C9EDA` |
+
+### Placement on a blog banner (measured from the live 931×551 banner)
+- **Size:** 40×40 px at 931 px wide, which is **4.3% of the width**
+- **Position:** top-left, **34 px** from the top and left edges (3.65% of the width)
+- Alone: no wordmark, no tagline, no box or shadow behind it
+- The headline's left edge lines up with the logo's left edge (same x)
+
+---
+
+## 2. Colours
+
+### Brand core
+| Name | Hex | Role |
+|---|---|---|
+| Antier Navy | `#002245` | Logo on light, darkest brand blue |
+| Antier Cyan | `#0C9EDA` | Logo accent, glow colour, brand highlight |
+| White | `#FFFFFF` | Headline text, logo squares on dark |
+
+### Banner palette (sampled from the live blog images)
+| Role | Hex range | Notes |
+|---|---|---|
+| Background shadows | `#000000` – `#001020` | Most of the frame is near-black or very deep navy |
+| Background mid-tones | `#102030` – `#203040` | Dark slate and navy surfaces |
+| Steel / stone highlights | `#405060` – `#607080` | Textured 3D surfaces catching light |
+| Glow, hottest | `#03F8FD` | Cyan-white core of glowing objects |
+| Glow, main | `#00A2F5` | Electric blue |
+| Glow, deep | `#0061BC` | Shadowed side of glowing objects |
+
+### Topic accents (only inside the stock image, never on the text)
+Most images are blue or cyan. These accents show up for certain topics:
+- **Stablecoins:** gold coins
+- **Solana and other chains:** purple or magenta
+- **RWA / tokenized funds:** blue-violet
+- **Formal verification / security:** warm orange-red (rare)
+- **Ethereum upgrade:** the only light background (pale blue)
+
+### Extended tokens (Antier Figma variables, for UI and overlays)
+navy `#001A36 #002245 #0B3A66 #1E5B8F #4A89B9 #8FB4D8` · cyan `#087FB0 #0C9EDA #2BB4E6 #5CC9EE #8CDDF5 #E6F6FD` · indigo `#3D34D9 #4F46E5 #6C63EC #8B85F3 #B7B4FA`
+
+---
+
+## 3. Typography
+
+| Setting | Value |
+|---|---|
+| **Font family** | **Almarai** (Google Fonts, weights 300 / 400 / 700 / 800) |
+| Headline weight | **Regular 400** (thin, clean: not bold) |
+| Colour | `#FFFFFF`, a single colour with no highlighted words |
+| Size | ~30 px at 931 px wide (**≈ 3.2% of the width**); 2 lines take about 72 px of height |
+| Line height | ~1.25–1.3 |
+| Letter spacing | 0 |
+| Alignment | Left |
+| Lines | **2** preferred, 3 at most |
+| Line length | ≤ ~32 characters per line (the live line "Choosing a Blockchain Partner?" ≈ 500 px) |
+| Text block | Starts at x = 34 px (same as the logo); vertically centred, slightly above the middle (live: y 232–304 at 551 height) |
+| Case | Normal sentence or title case as written. Questions end with "?", statements end with "." when there are two sentences. |
+
+Rules:
+- Exactly one text element: the **banner line** from the brief. No subtitle, category, date, CTA or URL.
+- No text box, panel or gradient card behind the text. The stock image must give a dark, quiet area on the left.
+- Check punctuation: no "??", no missing colon or full stop between two clauses.
+- Break lines for meaning, e.g. `Choosing a Blockchain Partner?` / `Look Deeper.`
+
+---
+
+## 4. Layout
+
+Master canvas: **931 × 551 px** (~1.69:1), the live blog size. Export at 2× (**1862 × 1102**) for sharpness.
+
+```
+┌───────────────────────────────────────────────────────────┐
+│ [logo 40px] ← 34px from the top and left                   │
+│                                                           │
+│                                 ╱╱  stock 3D subject      │
+│ Headline line one?           ╱╱  ███ glowing hero         │
+│ Headline line two.          ╱╱   ███ object, right 50–60% │
+│                                                           │
+│ (left ~45%: dark, low-detail area for the text)           │
+└───────────────────────────────────────────────────────────┘
+```
+
+- **Left ~45%:** text-safe area. It must be dark and low in contrast so white text reads (aim for WCAG contrast ≥ 4.5:1).
+- **Right ~55%:** the hero subject (the glowing object), usually right of centre and often cropped by the edge.
+- The image fills the whole canvas (full-bleed) with no border or rounded corners.
+- Scaling to other sizes: keep the ratios (logo 4.3% of the width, 3.65% margin, text ≈ 3.2% of the width).
+  - **1200 × 630 (OG/social):** logo 52 px, margin 44 px, text ~38 px
+  - **1920 × 1080 (article header):** logo 82 px, margin 70 px, text ~62 px. Crop the stock image to fill.
+
+---
+
+## 5. Stock imagery style
+
+The live blog uses **premium 3D / CGI stock renders** (the AI-3D style found on Magnific / Freepik).
+They are not illustrations, icons, flat vectors or people.
+
+### Signature look
+- **Dark, moody scene** (near-black, deep navy or charcoal) with **one bright glowing hero object**.
+- **Electric blue / cyan light** is the main glow, from inside the object or as rim light.
+- **Material contrast:** rough or matte surfaces (concrete, stone, metal) against glowing glass, crystal or light.
+- **Strong perspective and depth:** diagonal beams, tunnels, rings or pillars leading toward the subject.
+- Cinematic lighting, shallow depth of field, very little clutter, nothing that looks cartoonish.
+
+### Subject types seen on the live blog
+| Type | Live examples |
+|---|---|
+| Glowing geometric object | Cyan glass cube on concrete beams ("Choosing a Blockchain Partner"), glowing blue card |
+| Crypto symbol in 3D | Solana coin with reflection, crystal Ethereum octahedron |
+| Coins / tokens | Gold coins floating on blue (stablecoins) |
+| Abstract light structures | Fibre-optic strands, data-particle tunnel, concentric light rings, curved ribbons |
+| Data and finance | 3D waveform rings, trading candles with glowing panels |
+| Real-world photo (industry topics only) | Glass office at night (enterprise), container ship from above (logistics) |
+
+### Picking an image (checklist)
+1. Landscape, at least 1920 px wide, ideally ~16:9 or 1.7:1
+2. Subject sits on the **right half**; the left ~45% is dark and plain
+3. The blue / cyan family fits the brand. A topic accent (gold, purple) is fine if the overall mood stays dark.
+4. No baked-in text, watermark, logos of other companies or people's faces
+5. The subject makes sense for the topic at thumbnail size (~150 px wide on the listing grid)
+
+### Search keyword formulas (Magnific / Freepik stock)
+`[topic object] + 3d render + dark background + blue neon glow + cinematic`
+
+| Topic | Search terms |
+|---|---|
+| Identity / KYC / ERC-3643 | `glowing digital identity shield 3d dark blue`, `holographic id card neon blue 3d`, `fingerprint glass cube glow` |
+| Tokenization / RWA | `glowing token coin on pedestal dark 3d`, `glass cube building token blue neon` |
+| Stablecoins / payments | `gold coins floating dark blue 3d`, `digital currency flow light trails` |
+| DeFi / smart contracts | `glowing blue cube concrete beams 3d`, `abstract blockchain blocks neon dark` |
+| Wallets / cards | `glowing blue credit card 3d dark`, `digital wallet light tunnel` |
+| Security / audits | `glass shield neon blue dark 3d`, `glowing lock cube dark` |
+| Exchanges / trading | `trading candles neon blue 3d dark`, `stock chart holographic panels` |
+| Chains (Ethereum, Solana…) | `ethereum crystal 3d dark`, `solana coin purple glow reflection` |
+| Infrastructure / enterprise | `server data tunnel blue light`, `glass skyscraper night reflection` |
+
+### Avoid
+- Flat illustrations, isometric cartoons, emoji-style icons
+- Ring-of-icons diagrams (icon bubbles around a coin). They aren't used on the live blog.
+- Bright or white backgrounds (except a rare light one like the Ethereum image)
+- Busy detail behind the headline area
+- Reusing the same stock image for two posts
+
+---
+
+## 6. Brief format (input)
+
+Each blog brief (a Google Doc) gives:
+```
+BLOG TITLE- <long title written for search>     → shown under the card on the site, NOT on the image
+BANNER- <short hook line>                       → the only text on the image
+```
+Example: `BLOG TITLE- ERC-3643 Explained: The Evolution of Compliance-Enabled Tokenization`
+`BANNER- Bringing Identity and Compliance On-Chain With ERC-3643`
+→ Image text: `Bringing Identity and Compliance` / `On-Chain With ERC-3643`
+
+---
+
+## 7. Deliverables per post
+
+| File | Size | Text | Used for |
+|---|---|---|---|
+| `banner.png` | 931×551 @2x (1862×1102) | Logo + banner line | Blog card and spotlight on antier.com/blogs |
+| `banner-og.png` | 1200×630 | Logo + banner line | LinkedIn / X / OG meta |
+| `banner-clean.png` | 931×551 @2x | Logo only | Optional thumbnail without text |
+
+Before exporting, check:
+- [ ] Almarai Regular, white, one size, 2 lines
+- [ ] Logo is correct (quarter circles, not a full circle), 4.3% of width, 34 px margin at 931
+- [ ] The headline and logo share the same left edge
+- [ ] The left side is dark enough; the headline is readable at 300 px wide
+- [ ] Punctuation and casing match the brief
+- [ ] The stock image is licensed (Magnific / Freepik) and has no watermark
