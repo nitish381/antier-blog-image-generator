@@ -4,6 +4,13 @@ The single source of truth for every Antier blog banner made in this repo.
 It is based on the live blog images at https://www.antier.com/blogs/ and the official logo file.
 Follow it exactly. When it conflicts with any other file (including older Figma banners), **this guide wins**.
 
+> ## 🔒 FIXED SIZE: every blog image is **931 × 551 px**
+> This is a locked rule set by the Antier team. **Do not change it.**
+> - It applies to **all** blog images: banners, thumbnails and in-article diagrams.
+> - Canvas, Figma frame and exported file are all exactly **931 × 551 px** (aspect ~1.69:1).
+> - Don't make 1200×630, 1920×1080, square or any other size unless the team explicitly asks for that one image.
+> - If content doesn't fit, simplify or tighten the layout inside 931 × 551. Never grow the canvas.
+
 Reference files:
 - `references/blog-banner-choosing-a-blockchain-partner.jpg`: the main style reference (931×551)
 - `references/blog-listing-page-full.webp`: the full blog listing page (16 cards + spotlight)
@@ -115,7 +122,7 @@ Rules:
 
 ## 4. Layout
 
-Master canvas: **931 × 551 px** (~1.69:1), the live blog size. Export at 2× (**1862 × 1102**) for sharpness.
+Canvas: **931 × 551 px, fixed** (~1.69:1), the live blog size. The exported file is exactly 931 × 551 px.
 
 ```
 ┌───────────────────────────────────────────────────────────┐
@@ -132,9 +139,7 @@ Master canvas: **931 × 551 px** (~1.69:1), the live blog size. Export at 2× (*
 - **Left ~45%:** text-safe area. It must be dark and low in contrast so white text reads (aim for WCAG contrast ≥ 4.5:1).
 - **Right ~55%:** the hero subject (the glowing object), usually right of centre and often cropped by the edge.
 - The image fills the whole canvas (full-bleed) with no border or rounded corners.
-- Scaling to other sizes: keep the ratios (logo 4.3% of the width, 3.65% margin, text ≈ 3.2% of the width).
-  - **1200 × 630 (OG/social):** logo 52 px, margin 44 px, text ~38 px
-  - **1920 × 1080 (article header):** logo 82 px, margin 70 px, text ~62 px. Crop the stock image to fill.
+- **No other sizes.** All blog images stay 931 × 551 (see the fixed-size rule at the top).
 
 ---
 
@@ -161,7 +166,7 @@ They are not illustrations, icons, flat vectors or people.
 | Real-world photo (industry topics only) | Glass office at night (enterprise), container ship from above (logistics) |
 
 ### Picking an image (checklist)
-1. Landscape, at least 1920 px wide, ideally ~16:9 or 1.7:1
+1. Landscape, at least 1862 px wide (so a 931 × 551 crop stays sharp), ideally ~1.7:1
 2. Subject sits on the **right half**; the left ~45% is dark and plain
 3. The blue / cyan family fits the brand. A topic accent (gold, purple) is fine if the overall mood stays dark.
 4. No baked-in text, watermark, logos of other companies or people's faces
@@ -208,11 +213,11 @@ Example: `BLOG TITLE- ERC-3643 Explained: The Evolution of Compliance-Enabled To
 
 | File | Size | Text | Used for |
 |---|---|---|---|
-| `banner.png` | 931×551 @2x (1862×1102) | Logo + banner line | Blog card and spotlight on antier.com/blogs |
-| `banner-og.png` | 1200×630 | Logo + banner line | LinkedIn / X / OG meta |
-| `banner-clean.png` | 931×551 @2x | Logo only | Optional thumbnail without text |
+| `banner.png` | **931×551** | Logo + banner line | Blog card, spotlight and social sharing |
+| `banner-clean.png` | **931×551** | Logo only | Optional thumbnail without text |
 
 Before exporting, check:
+- [ ] Canvas and exported file are exactly **931 × 551 px**
 - [ ] Almarai Regular, white, one size, 2 lines
 - [ ] Logo is correct (quarter circles, not a full circle), 4.3% of width, 34 px margin at 931
 - [ ] The headline and logo share the same left edge
@@ -229,7 +234,7 @@ Reference: `outputs/erc-3643/diagram-erc-3643-architecture.png` (Figma: Blogs im
 
 | Element | Spec |
 |---|---|
-| Canvas | 1200 px wide (height to fit content), export @2x |
+| Canvas | **931 × 551 px, fixed** (same as banners). Fit the content to this size; don't grow the canvas |
 | Background | Diagonal gradient `#F3FBFE` (cyan wash) → `#FFFFFF` → `#EEEDFD` (lilac soft), plus two large blurred glows: cyan `#8CDDF5` top-right and lilac `#B7B4FA` bottom-left |
 | Logo | `brand/logo/antier-mark.svg` (navy), 40 px at 44 px from the top and left |
 | Title | The doc's `DIAGRAM HEADING`, Almarai ExtraBold 40, `#002245` |
