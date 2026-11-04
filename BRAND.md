@@ -219,3 +219,27 @@ Before exporting, check:
 - [ ] The left side is dark enough; the headline is readable at 300 px wide
 - [ ] Punctuation and casing match the brief
 - [ ] The stock image is licensed (Magnific / Freepik) and has no watermark
+
+---
+
+## 8. In-article diagrams (light theme)
+
+Banners are dark. **Diagrams inside the article are light**, using a soft Antier gradient.
+Reference: `outputs/erc-3643/diagram-erc-3643-architecture.png` (Figma: Blogs images → `Diagram · ERC-3643 Architecture`).
+
+| Element | Spec |
+|---|---|
+| Canvas | 1200 px wide (height to fit content), export @2x |
+| Background | Diagonal gradient `#F3FBFE` (cyan wash) → `#FFFFFF` → `#EEEDFD` (lilac soft), plus two large blurred glows: cyan `#8CDDF5` top-right and lilac `#B7B4FA` bottom-left |
+| Logo | `brand/logo/antier-mark.svg` (navy), 40 px at 44 px from the top and left |
+| Title | The doc's `DIAGRAM HEADING`, Almarai ExtraBold 40, `#002245` |
+| Subtitle | One line, Almarai Regular 18, `#475569` |
+| Hero node | Gradient `#0C9EDA` → `#4F46E5`, radius 20, white text, soft indigo shadow |
+| Cards | White, radius 14, border `#E2E8F0`, shadow 0/4/14 navy 6%. Icon in a 40 px `#E6F6FD` box, stroke `#0C9EDA`. Title Almarai Bold 16 `#002245`; description Regular 13/140% `#475569` |
+| Layer panels | White at 62% with a background blur, radius 22, a cyan or lilac border, numbered step badge, an uppercase layer label (ExtraBold 13, +8% tracking) and a question-style caption |
+| Chips | Pill, Almarai Bold 12. Cyan tone `#E6F6FD`/`#087FB0`; indigo tone `#EEEDFD`/`#3D34D9` |
+| Connectors | 2 px, cyan `#0C9EDA` / indigo `#4F46E5`; a dashed line for branching; chevron arrowheads |
+| Status | Success `#047857` on `#E7F8F1`; error `#B91C1C` on `#FDECEC`. Only for outcomes |
+| Footnote | Almarai Regular 13 `#64748B` with an accuracy disclaimer |
+
+Reusable Figma components: `Diagram/Contract card` (Title, Description, Icon swap), `Diagram/Chip` (Tone = Cyan / Indigo / OnDark), `Icon/*` (section "Components · ERC-3643 diagram").

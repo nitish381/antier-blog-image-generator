@@ -55,6 +55,15 @@ So V2's image slot holds a vector 3D placeholder built in the same style. To fin
   - Laid onto the board plane with an affine transform (rotated and foreshortened to match the board's perspective). It stays editable text.
 - **Layout:** BRAND.md as before (logo 40 px with a 34 px margin; Almarai Regular 30/130% headline centred at y = 268; dark left side kept by the scrim, plus a top and bottom vignette).
 
+## Diagram: ERC-3643 Architecture (light theme)
+From the doc's `DIAGRAM HEADING: ERC-3643 Architecture` and the "How ERC-3643 Connects Identity, Ownership and Compliance" section.
+- **Top row:** Sender wallet → `transfer()` → **ERC-3643 Permissioned Token** (ERC-20 compatible; admin roles Mint, Burn, Pause, Freeze and Recover) → Receiver wallet ("executes only if every check passes").
+- **Layer 1, Identity:** ONCHAINID, Identity Registry, Identity Registry Storage.
+- **Layer 2, Verification:** Trusted Issuers Registry and Claim Topics Registry, with example claims (KYC/AML, accreditation, jurisdiction, issuer-defined).
+- **Layer 3, Compliance:** Compliance Contract, its configurable modules, and the transfer outcome (executes / reverts).
+- **Footnote:** matches the doc's caption ("original high-level diagram, not a deployment-specific contract map").
+- **File:** `diagram-erc-3643-architecture.png`.
+
 ## Files
 - `banner-v1.png`: V1 render (1×)
 - `banner-v2.png`: V2 render (1×, from Figma; export 2× from Figma for production)
