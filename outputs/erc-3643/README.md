@@ -64,6 +64,14 @@ From the doc's `DIAGRAM HEADING: ERC-3643 Architecture` and the "How ERC-3643 Co
 - **Footnote:** matches the doc's caption ("original high-level diagram, not a deployment-specific contract map").
 - **File:** `diagram-erc-3643-architecture.png` (931×551, matching the fixed blog-image size). Figma frame: `Diagram · ERC-3643 Architecture (931×551, light)`. The earlier 1200×956 version is kept in Figma, marked superseded.
 
+## Diagram v2: ERC-3643 Architecture, pipeline layout (light, 931×551)
+Same content as the first diagram, redesigned as a **left-to-right transfer pipeline** that's easier to scan in an article.
+- **Flow:** Sender wallet → ① **Identity** (ONCHAINID, Identity Registry, Identity Registry Storage) → ② **Verification** (Trusted Issuers Registry, Claim Topics Registry; KYC/AML, Accredited, Jurisdiction) → ③ **Compliance** (Compliance Contract; investor caps, holding limits, jurisdictions, investor class, offering rules) → Receiver wallet (executes / reverts).
+- **Each stage opens with the question it answers**, e.g. "Is the receiver a known, registered investor?".
+- **Base bar:** the ERC-3643 Permissioned Token runs along the bottom ("calls checks 1–3 on every transfer"), with dashed links up to each stage and its admin roles (Mint, Burn, Pause, Freeze, Recover).
+- **Figma:** `Diagram · ERC-3643 Architecture · Pipeline (931×551, light)`. It uses the new `Diagram/Contract row · Mini` and `Diagram/Chip · Mini` components.
+- **File:** `diagram-erc-3643-architecture-pipeline.png` (931×551).
+
 ## Files
 - `banner-v1.png`: V1 render (1×)
 - `banner-v2.png`: V2 render (1×, from Figma; export 2× from Figma for production)
