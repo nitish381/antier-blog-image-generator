@@ -72,6 +72,15 @@ Same content as the first diagram, redesigned as a **left-to-right transfer pipe
 - **Figma:** `Diagram · ERC-3643 Architecture · Pipeline (931×551, light)`. It uses the new `Diagram/Contract row · Mini` and `Diagram/Chip · Mini` components.
 - **File:** `diagram-erc-3643-architecture-pipeline.png` (931×551).
 
+## Diagram v3: ERC-3643 Architecture, layers (light, 931×551). Matches the team's source diagram
+Rebuilt from the team's `erc3643-architecture 1` image in Figma with **exactly the same content**; only the styling changed to Antier's.
+- **01 Identity Layer** ("Who the investor is, attested by trusted parties"): Investor → KYC / KYB Provider → Signed Claims → ONCHAINID.
+- **02 Verification Layer** ("Whether the identity meets this token’s requirements"): Trusted Issuers Registry → Claim Topics Registry → **Identity Registry** (highlighted) ← Identity Registry Storage.
+- **03 Transfer & Compliance Layer** ("Whether this specific transaction is allowed"): Transfer Request → ERC-3643 Token → Compliance Modules → Transfer executed / Transfer rejected.
+- **Restyled:** the layer colours are now Antier indigo, cyan and navy (instead of purple, blue and green); Almarai type; navy Antier mark with the title; soft light gradient background. Green and red are kept only for the two outcomes.
+- **Figma:** `Diagram · ERC-3643 Architecture · Layers (931×551, light)`.
+- **File:** `diagram-erc-3643-architecture-layers.png`.
+
 ## Files
 - `banner-v1.png`: V1 render (1×)
 - `banner-v2.png`: V2 render (1×, from Figma; export 2× from Figma for production)
