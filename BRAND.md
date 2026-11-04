@@ -98,14 +98,18 @@ navy `#001A36 #002245 #0B3A66 #1E5B8F #4A89B9 #8FB4D8` · cyan `#087FB0 #0C9EDA 
 
 ## 3. Typography
 
+> ### 🔒 Headline font rule (fixed)
+> **Almarai · Regular (400) · 34 px · letter spacing 4%** · white `#FFFFFF`.
+> Use this exact setting for every blog banner headline. Don't change the size, weight or tracking.
+
 | Setting | Value |
 |---|---|
 | **Font family** | **Almarai** (Google Fonts, weights 300 / 400 / 700 / 800) |
 | Headline weight | **Regular 400** (thin, clean: not bold) |
 | Colour | `#FFFFFF`, a single colour with no highlighted words |
-| Size | ~30 px at 931 px wide (**≈ 3.2% of the width**); 2 lines take about 72 px of height |
+| Size | **34 px** (fixed, at the 931 × 551 canvas) |
 | Line height | ~1.25–1.3 |
-| Letter spacing | 0 |
+| Letter spacing | **4%** |
 | Alignment | Left |
 | Lines | **2** preferred, 3 at most |
 | Line length | ≤ ~32 characters per line (the live line "Choosing a Blockchain Partner?" ≈ 500 px) |
