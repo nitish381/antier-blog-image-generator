@@ -9,7 +9,8 @@
 | Version | Frame | Status |
 |---|---|---|
 | V1 | `Blog Banner · ERC-3643 Explained` (951×551) | Kept for comparison. Not on-brand: Inter, full-circle logo, vector coin |
-| **V2** | `Blog Banner · ERC-3643 · V2 (931×551)` | **Brand-aligned per `BRAND.md`** |
+| V2 | `Blog Banner · ERC-3643 · V2 (931×551)` | Brand-aligned: glass token cube on a concrete beam, plus a Magnific image slot |
+| **V3** | `Blog Banner · ERC-3643 · V3 (931×551)` | **Brand-aligned: original isometric layers (identity → compliance → token)** |
 
 ## V2 design decisions
 - **Canvas:** 931×551, the same size as the live antier.com blog banners.
@@ -32,6 +33,15 @@ So V2's image slot holds a vector 3D placeholder built in the same style. To fin
 3. Hide **`Visual · 3D placeholder`**. Keep **`Scrim · Left readability`** on, and lower its opacity if the image is already dark.
 4. Export at **2×** (1862×1102) as PNG.
 
+## V3 design decisions
+- **Concept:** ERC-3643 as a stack of three glass layers. **On-chain identity** at the top (shield), **compliance rules** in the middle (checked document), **token** at the base (coins).
+  - Light links between the layers show that transfers pass through identity and compliance checks.
+- **Typography and logo:** same as V2 (Almarai Regular 30/130%, official mark at 40 px with a 34 px margin, text centre at y = 268).
+- **Style:** dark navy scene, cyan and indigo glow, an isometric floor grid that fades out, and the left ~45% kept dark for the headline.
+- **Icons:** upright and glowing, so they stay readable at the ~150 px blog-grid thumbnail size.
+- **All original vector artwork.** The third-party image pasted for reference (a Gate Learn illustration with "Gate Learn" watermarks) was **not used**. Removing those watermarks and publishing the art would use another company's copyrighted work without a licence.
+
 ## Files
 - `banner-v1.png`: V1 render (1×)
 - `banner-v2.png`: V2 render (1×, from Figma; export 2× from Figma for production)
+- `banner-v3.png`: V3 render (1×, from Figma; export 2× from Figma for production)
